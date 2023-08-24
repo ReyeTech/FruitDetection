@@ -1,6 +1,8 @@
 import cv2
 from ultralytics import YOLO
 import argparse
+import time
+import cvzone
 
 ap = argparse.ArgumentParser()
 ap.add_argument('-v', '--video', required=True, help='Path to input video file')
@@ -8,17 +10,26 @@ args = ap.parse_args()
 
 model = YOLO("yolov8n.pt")
 
-video_source = cv2.VideoCapture(args.video)
+cap = cv2.VideoCapture(args.video)
+prev_frame_time = 0
+new_frame_time = 0
 
-while True:
-    ret, frame = video_source.read()
+while (cap.isOpened()):
+    ret, frame = cap.read()
 
     if not ret:
         break 
 
-    results = model.predict(source=args.video, show=True)
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    new_frame_time = time.time()
+    fps = 1/(new_frame_time-prev_frame_time)
+    prev_frame_time = new_frame_time
+    fps = int(fps)
+    fps = str(fps)
+    cvzone.putTextRect(frame, fps, (100, 50), scale = 3, thickness=5, offset=20, colorR=(0, 0, 255))
+    results = model.predict(source = frame, show = True, save = False)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-video_source.release()
+cap.release()
 cv2.destroyAllWindows()
