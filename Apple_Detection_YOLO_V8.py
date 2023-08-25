@@ -28,6 +28,7 @@ while (cap.isOpened()):
     fps = str(fps)
     cvzone.putTextRect(frame, fps, (100, 50), scale = 3, thickness=5, offset=20, colorR=(0, 0, 255))
     results = model.predict(source = frame, show = True, save = False)
+    print(fps)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
