@@ -24,8 +24,7 @@ pip install -r requirements.txt
 ```
 
 ## Step 4: Donwload the Sample Video to test the program
-The Video can be downloaded from [this link](https://drive.google.com/file/d/1kQ2DYT2tAb8YbgtAUycGw3NeDSKOh_I7/view?usp=sharing)
-
+The Video can be downloaded from [this link](https://drive.google.com/file/d/1rnrNy7uZTQr1aTp2aVsDLUYFf_uV_s95/view?usp=sharing)
 
 ## Step 5: Executing the code from terminal
 use the following code to execute the program in terminal
