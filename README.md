@@ -2,6 +2,8 @@
 
 This is an Apple Detection Code made in python using YOLO v8
 
+https://github.com/ReyeTech/AppleDetection/assets/109020327/1ec917bf-7e9d-4ecc-8b7f-a2c24af59491
+
 read more about Yolo v8 [here](https://docs.ultralytics.com/)
 
 ## Steps to use the code: 
