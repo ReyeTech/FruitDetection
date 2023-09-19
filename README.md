@@ -1,4 +1,4 @@
-# Apple detection
+# Fruit detection
 
 This repository focuses on using YOLO v8 model for detecting and locating Apples in a farm using python 
 
