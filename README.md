@@ -1,6 +1,8 @@
 # Fruit detection
 
-This repository focuses on using YOLO v8 model for detecting and locating Apples in a farm using python 
+This repository focuses on using YOLO v8 model for detecting and locating fruits in a farm using python 
+
+## For Apple Detection
 
 https://github.com/ReyeTech/AppleDetection/assets/109020327/1ec917bf-7e9d-4ecc-8b7f-a2c24af59491
 
